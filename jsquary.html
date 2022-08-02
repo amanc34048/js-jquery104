@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js first p1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#bm').click(function(){
+              $('#m1').hide(); 
+            })
+            $('#h').click(function(){
+              $('#m1').show(); 
+            })
+            $('#a1').click(function(){
+              $('#a1').hide(); 
+            })
+            $('#u').click(function(){
+              $('#u').hide(); 
+            })
+         
+        });
+    </script>
+     <script>
+    </script>
+</head>
+<body>
+    <p id="a1">hello world</p>
+    <p>click the switch</p>
+    <p id="u">hello student</p>
+    <hr>
+    <p>next img hides</p>
+    <hr>
+    <img src="rtw.jpg" width="200px" height="150px" id="m1"><br>
+    <input type="button" id="bm" value="click here">
+    <input type="button" id="h" value="show hera">
+    <hr>
+</body>
+</html>
