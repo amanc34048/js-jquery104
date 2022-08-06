@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>divhieds</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+          $(document).ready(function(){
+
+            $('#btnShow').attr("Disabled",true);
+             if(("are you sure"))
+             {
+              $("#btnHide").click(function(){
+                $("#div1").hide(3000);
+                $('#btnHide').attr("Disabled",true);
+                $("#btnShow").attr("Disabled",false);
+              });
+            }
+          
+              $("#btnShow").click(function(){
+                $("#div1").show(3000);
+                $(this).attr("Disabled",true);
+                $("#btnHide").attr("Disabled",false);
+              });
+
+              $("#btnToggle").click(function(){
+                $("#div1").toggle(3000);
+                ($("#btnToggle").text()=="Hide")
+                ?($("#btnToggle").text("Show"),$("#btnHide").attr("Disabled",true),$("#btnShow").attr("Disabled",false))
+                :($("#btnToggle").text("Hide"),$("#btnShow").attr("Disabled",true),$("#btnHide").attr("Disabled",false));
+              });
+            
+              $("#btnPlus").click(function(){
+                var NJ=parseInt($("#div1").css("height"));
+                if(NJ<=400)
+                {
+                  NJ+=20;
+                  $("#div1").css("height",NJ);
+                  $("#div1").css("width",NJ);
+                }
+                else
+                {
+                  alert("more than 400 size posiable");
+                }
+              });
+              $("#btnMinus").click(function(){
+                var NJ=parseInt($("#div1").css("height"));
+                if(NJ>=20)
+                {
+                  NJ-=20;
+                  $("#div1").css("height",NJ);
+                  $("#div1").css("width",NJ);
+                }
+                else
+                {
+                  alert("more minimum size is 20 posiable");
+                }
+              });
+         });
+
+      
+        </script>
+        <style>
+          div{
+            background-color: aquamarine;
+            height: 200px;
+            width: 200px;
+          }
+        </style>
+    </head>
+    <body>
+      <div id="div1"></div>
+         <br>
+        <hr>
+        
+        <input type="button" value="Hide" id="btnHide">
+        <input type="button" value="Show" id="btnShow">
+        <br>
+        <hr>
+        <button id="btnToggle">Hide</button>
+        <br>
+        <hr>
+        <button id="btnPlus">+</button>
+        <button id="btnMinus">-</button>
+    </body>
+</html>

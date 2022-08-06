@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>keyjq</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+       <script>
+        $(document).ready(function(){
+         
+            $("#focuskey").focus(function(){
+            $("#focuskey").css("background-color","red");
+            });
+
+            $("#blurkey").blur(function(){
+            $("#blurkey").css("background-color","yellow");
+            });
+
+            
+            $("#keypress").keypress(function(){
+               alert($("keypress").val('enter name'));
+            });
+
+            $("#keyup").keyup(function(){
+               alert($("#keyup").val());
+            });
+        });
+       </script>
+    </head>
+    <body>
+     
+        <div></div>
+        <div></div>
+        <div></div>
+        <input type="text" id="focuskey" placeholder="enter yourname"/>
+        <small id="focuskey"></small>
+        <hr>
+        <input type="text" id="blurkey" placeholder="enter yourname"/>
+        <small id="blurkey"></small>
+        <hr>
+        <input type="text" id="keypress" placeholder="enter yourname"/>
+        <small id="keypress"></small>
+        <hr>
+        <input type="text" id="keyup" placeholder="enter yourname"/>
+        <small id="focus"></small>
+    </body>
+</html>
