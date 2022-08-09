@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>draging</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <!-- <style>
+        #t1,#t2,#t3,#t4
+        {
+            height:200px;
+            width: 200px;
+            background-color: aqua;
+        }
+        #t5{
+            height: 200px;
+            width: 600px;
+            background-color: rgb(202, 146, 62);
+        }
+        #Y1{
+            height:200px;
+            width: 200px;
+        }
+        </style> -->
+        <script>
+      $(document).ready(function(){
+            $("#t1").draggable();
+
+         $("#t2 p").draggable({
+            containment:"#t2"
+         });
+      
+         $("#t3 p").draggable({
+            axis:"x"
+         });
+         $("#t4 p").draggable({
+            axis:"y"
+         });
+         $("#t5 p").draggable({
+            distance:"400"
+         })
+      });
+        </script>
+    </head>
+    <body>
+        <div id="t1">
+            <p>
+            <img src="sunset-1373171_960_720.webp" style="height:200px;width:200px;" ></p>
+        </div>
+        <hr>
+        <div id="t2">
+            <p>
+            <img src="N1.jpg" style="height:200px;width:200px;" id="h4"></p>
+        </div>
+        <hr>
+        <div id="t3">
+            <p>  
+            <img src="o1.jpg" style="height:200px;width:200px;" id="h3"></p>
+        </div>
+        <hr>
+        <div id="t4">
+           
+            <p>
+            <img src="n2.jpg" style="height:200px;width:200px;" id="h2"></p>
+        </div>
+        <hr>
+        <div id="t5">
+            <p>  
+            <img src="g1.webp" style="height: 200px;width:600px;" id="h1" ></p>
+        </div>
+    </body>
+</html>
