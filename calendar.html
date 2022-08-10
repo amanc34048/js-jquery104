@@ -1,0 +1,40 @@
+<html>
+    <head>
+      <title>calendar</title>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+      <style>
+        .ui-datepicker {
+            background-color: rgb(160, 175, 175);
+	width: 17em;
+	padding: .2em .2em 0;
+	display: none;
+}
+.ui-datepicker td {
+    background-color: rgb(174, 174, 194);
+	border: 0;
+	padding: 1px;
+    color: white;
+}
+.ui-datepicker .ui-datepicker-header {
+	position: relative;
+	padding: .2em 0;
+    background-color: rgb(158, 216, 192);
+}
+      </style>
+      <script>
+        $(document).ready(function(){
+         $("#dbapicker").datepicker({
+            showAnim:"slide"
+         });
+        });
+      </script>
+    </head>
+    <body>
+        <div>
+            <p><input type="button" id="dbapicker" value="opclick"></p>
+   
+        </div>
+    </body>
+</html>

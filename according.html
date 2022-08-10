@@ -1,0 +1,45 @@
+<html>
+    <heda>
+        <title>according</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <style>
+            #j1 div{
+                height:5%;
+                background-color: bisque;
+                width:100%;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                $("#j1").accordion({
+                    collapsible: true,
+                    icons: { "header": "ui-icon-folder-collapsed",
+  "activeHeader": "ui-icon-folder-open" }
+                });
+            })
+        </script>
+    </heda>
+   <body>
+    <div id="j1">
+        <h2>file</h2>
+        <div>
+            <p>o</p>
+        </div>
+        <h2>document</h2>
+        <div>
+            <p><img src="o1.jpg"></p>
+            <br>
+        </div>
+        <h2>png</h2>
+        <div>
+            <p>k</p>
+        </div>
+        <h2>file</h2>
+        <div>
+            <p>k</p>
+        </div>
+    </div>
+   </body>
+</html>
