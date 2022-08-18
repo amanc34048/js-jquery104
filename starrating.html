@@ -1,0 +1,24 @@
+<html>
+    <heda>
+        <title>rating</title>
+                                
+        <script>
+           $(document).ready(function(){
+				$("#starrateing").rating('create',
+                   {
+                        coloron: 'red',
+                        onClick: function () {
+                           alert('rating is ' + this.attr('data-rating'));
+						   
+                        }
+                    });
+                });
+        </script>
+    </heda>
+    <body>
+        <p>ap ko kesa laga</p>
+        <div id="starrateing">
+          <input type="hidden" value="1" placeholder="rating">
+        </div>
+    </body>
+</html>
