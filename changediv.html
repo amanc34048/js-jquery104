@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>changfordivcolor</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+         $(document).ready(function(){
+          $("#sky9stu").draggable();
+          $("#sky9").droppable({
+            accept:"#sky9stu",
+            drop:function(event,ui){
+              var colorchange=prompt("enter color");
+             $("#sky9").css("background-color",colorchange).html("it's change..")
+            }
+          })
+           });
+       
+  </script>
+  <style>
+    #sky9stu{
+        height:200px;
+        width:200px;
+        background-color: aquamarine;
+    }
+
+    #sky9{
+        height:200px;
+        width:200px;
+        background-color: rgb(140, 160, 153);
+    }
+  </style>
+    </head>
+    <body>
+        <div id="sky9stu">
+            <p>your name hre</p>
+        </div>
+        <hr>
+        <div id="sky9">
+            <p>hello</p>
+        </div>
+    </body>
+</html>
